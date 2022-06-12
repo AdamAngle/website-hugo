@@ -1,0 +1,26 @@
+baseURL = 'https://www.adamangle.com/'
+languageCode = 'en-us'
+title = 'Adam Angle'
+theme = 'adamangle'
+
+[menu]
+
+  [[menu.main]]
+    identifier = "index"
+    name = "Home"
+    pre = "home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "post"
+    name = "Blog"
+    pre = "pen-tool"
+    url = "/post/"
+    weight = 2
+
+[params]
+  creatorName = 'Adam Angle'
+
+[taxonomies]
+  tag = 'tags'

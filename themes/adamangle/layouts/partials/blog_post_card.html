@@ -1,0 +1,19 @@
+<div class="card-col-blog">
+    <div class="card-hover-grow card td-n">
+        <a href="{{ .RelPermalink }}" class="stretched-link"></a>
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="https://th.bing.com/th/id/OIP.2_3j6nWtlUN1LZcmuPF0UgHaEK?w=297&amp;h=180&amp;c=7&amp;o=5&amp;pid=1.7"
+                    height="150" class="img-nostretch w-100">
+            </div>
+            <div class="card-blog-content text-start col-sm-8">
+                <div class="card-title h5 post-title">{{ .Title }}</div>
+                <div class="card-subtitle h6 post-date d-flex align-items-center">
+                    {{ partial "metadata.html" . }}
+                </div>
+                
+                <p class="card-text post-description">{{ .Summary }}</p>
+            </div>
+        </div>
+    </div>
+</div>

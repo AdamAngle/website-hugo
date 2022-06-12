@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg fixed-top bg-transition bg-transparent {{ if .Params.Header_Image }}navbar-dark{{ else }}navbar-light{{ end }}" id="navbar-main">
+    <div class="container-xl">
+        <a class="brand-no-decoration" href="/">
+            <span class="navbar-brand">Adam Angle</span>
+        </a>
+        <button data-bs-toggle="collapse" data-bs-target="#navbar-nav" aria-controls="navbar-nav" type="button"
+            aria-label="Toggle navigation" class="navbar-toggler collapsed"><span
+                class="navbar-toggler-icon"></span></button>
+        <div class="navbar-collapse collapse" id="navbar-nav">
+            <ul class="me-auto mb-2 mb-lg-0 navbar-nav">
+                {{ $currentPage := . }}
+                {{ range .Site.Menus.main }}
+                {{ $active := or (eq $.RelPermalink .URL) (or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .)) }}
+                <li class="nav-item">
+                    <a class="nav-link{{ if $active }} active{{ end }}" href="{{ .URL }}" {{ if $active }}aria-current="page"{{ end }}>
+                    {{ $text := print .Name | safeHTML }}
+                    {{ $text }}
+                    </a>
+                </li>
+                {{ end }}
+                <!-- <li class="nav-item">
+                    <a class="nav-link active" href="/" aria-current="page">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/blog">
+                        Blog
+                    </a>
+                </li> -->
+            </ul>
+            <ul class="navbar-nav flex-row ml-md-auto d-flex-inline d-md-flex justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link p-2 navbar-nav-svg" href="https://linkedin.com/in/adamangle/" target="_blank">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2 navbar-nav-svg" href="https://github.com/AdamAngle/" target="_blank">
+                        <i data-feather="github"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

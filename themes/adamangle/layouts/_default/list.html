@@ -1,0 +1,18 @@
+
+{{ define "main" }}
+{{ partial "sm_gradient.html" . }}
+<div class="pt-1em ta-l container-xl">
+    <div class="row">
+        <div class="card card-white col-lg-3 col-sm-12 text-center">
+            Once I get a few more posts here, I will add some cool filtering controls in this box.
+        </div>
+        <div class="col-lg-9 col-sm-12">
+            <div class="blog-list">
+                {{ range .Pages.ByPublishDate.Reverse }}
+                {{ partial "blog_post_card.html" . }}
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}
