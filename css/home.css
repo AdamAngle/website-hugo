@@ -1,0 +1,47 @@
+.paral-bg-berkeley {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.5)
+    ), url("/img/berkeley.webp") no-repeat center top;
+    text-shadow: 1px 1px 2px black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-color:rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+.paral-bg-berkeley .future-course {
+    color: rgb(219, 219, 219);
+}
+
+.list-horizontal li {
+    display:inline-block;
+}
+.list-horizontal li:before {
+    content: '\00a0\00a0\00a0\00a0\00a0';
+    color:#999;
+    color:rgba(0,0,0,0.5);
+    font-size:11px;
+}
+
+.future-course {
+    font-style: italic;
+    display: none;
+}
+
+.future-course.shown {
+    display: block;
+}
+
+@media only screen and (max-width: 768px) {
+    .anim-gradient-container-sm.top > div {
+        padding: 6em 0 3em 0;
+    }
+}
+@media only screen and (max-height: 768px) {
+    .anim-gradient-container-sm.top > div {
+        padding: 6em 0 3em 0;
+    }
+}
